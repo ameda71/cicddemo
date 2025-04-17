@@ -59,7 +59,7 @@ pipeline {
 
                     git add django-app-pod-svc.yaml
                     git commit -m "Update image tag to ${IMAGE_TAG} via Jenkins"
-                    git push origin main
+                    git push origin udemy
                     '''
                 }
             }

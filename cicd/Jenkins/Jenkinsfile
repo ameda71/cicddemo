@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         IMAGE_TAG = "v${BUILD_NUMBER}"
-        DOCKER_HUB_REPO = "saiteja562/samplewebapp"
+        DOCKER_HUB_REPO = "saiteja562/samplewebapp2"
     }
 
     stages {
@@ -19,7 +19,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    cd cicddemo/Django-webapp
+                    cd cicd/Django-webapp
                     echo 'Build Docker Image'
                     docker build -t ${DOCKER_HUB_REPO}:${IMAGE_TAG} .
                     '''
@@ -45,7 +45,7 @@ pipeline {
             steps {
                 script {
                     sh '''
-                    cd cicddemo/ArgoCD/deployments/
+                    cd cicd/ArgoCD/deployments/
                     echo "Before update:"
                     cat django-app-pod-svc.yaml
 

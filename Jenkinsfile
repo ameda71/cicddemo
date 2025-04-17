@@ -7,13 +7,13 @@ pipeline {
     }
 
     stages {
-        stage('Stage 1. Checkout source code repo') {
-            steps {
-                git branch: 'main',
-                    credentialsId: 'github', // ✅ Your Global GitHub creds
-                    url: 'git@github.com:ameda71/cicddemo.git'
-            }
-        }
+        // stage('Stage 1. Checkout source code repo') {
+        //     steps {
+        //         git branch: 'udemy',
+        //             credentialsId: 'github', // ✅ Your Global GitHub creds
+        //             url: 'git@github.com:ameda71/cicddemo.git'
+        //     }
+        // }
 
         stage('Stage 2. Build Docker image') {
             steps {

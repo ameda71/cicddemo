@@ -49,7 +49,7 @@ pipeline {
                     echo "Before update:"
                     cat django-app-pod-svc.yaml
 
-                    sed -i "s|v5|${IMAGE_TAG}|g" django-app-pod-svc.yaml
+                    sed -i "s|v6|${IMAGE_TAG}|g" django-app-pod-svc.yaml
 
                     echo "After update:"
                     cat django-app-pod-svc.yaml
